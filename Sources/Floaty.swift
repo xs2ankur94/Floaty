@@ -956,20 +956,20 @@ open class Floaty: UIView {
         return
     }
     
-    if isCustomFrame == false {
-      setBottomFrameAccordingToRTL(keyboardSize)
-    } else {
-      size = min(frame.size.width, frame.size.height)
-    }
-    
-    UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions(), animations: {
-      self.frame = CGRect(
-        x: UIScreen.main.bounds.width-self.size - self.paddingX,
-        y: UIScreen.main.bounds.height-self.size - keyboardSize - self.paddingY,
-        width: self.size,
-        height: self.size
-      )
-    }, completion: nil)
+//    if isCustomFrame == false {
+//      setBottomFrameAccordingToRTL(keyboardSize)
+//    } else {
+//      size = min(frame.size.width, frame.size.height)
+//    }
+//
+//    UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions(), animations: {
+//      self.frame = CGRect(
+//        x: UIScreen.main.bounds.width-self.size - self.paddingX,
+//        y: UIScreen.main.bounds.height-self.size - keyboardSize - self.paddingY,
+//        width: self.size,
+//        height: self.size
+//      )
+//    }, completion: nil)
   }
   
   @objc internal func keyboardWillHide(_ notification: Notification) {
@@ -977,14 +977,14 @@ open class Floaty: UIView {
       return
     }
     
-    UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions(), animations: {
-      if self.isCustomFrame == false {
-        self.setBottomFrameAccordingToRTL()
-      } else {
-        self.size = min(self.frame.size.width, self.frame.size.height)
-      }
-      
-    }, completion: nil)
+//    UIView.animate(withDuration: 0.2, delay: 0, options: UIView.AnimationOptions(), animations: {
+//      if self.isCustomFrame == false {
+//        self.setBottomFrameAccordingToRTL()
+//      } else {
+//        self.size = min(self.frame.size.width, self.frame.size.height)
+//      }
+//
+//    }, completion: nil)
   }
 }
 
